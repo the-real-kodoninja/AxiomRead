@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: axiom_read_development
+  username: your_db_username
+  password: your_db_password
+
+test:
+  <<: *default
+  database: axiom_read_test
+  username: your_db_username
+  password: your_db_password
+
+production:
+  <<: *default
+  database: axiom_read_production
+  username: your_db_username
+  password: your_db_password

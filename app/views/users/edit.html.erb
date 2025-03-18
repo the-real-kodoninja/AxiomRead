@@ -1,0 +1,10 @@
+<!-- app/views/users/edit.html.erb -->
+
+<h1>Edit Profile</h1>
+<%= form_for(@user, url: user_path(@user)) do |f| %>
+  <%= f.email_field :email, autofocus: true %>
+  <%= f.password_field :password, autocomplete: "new-password" %>
+  <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  <%= f.file_field :avatar %>
+  <%= f.submit "Save changes" %>
+<% end %>

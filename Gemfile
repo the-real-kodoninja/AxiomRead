@@ -1,4 +1,4 @@
-# Gemfile
+source "https://rubygems.org"
 
 # Add gems for authentication, file uploads, etc.
 gem 'devise'          # For user authentication
